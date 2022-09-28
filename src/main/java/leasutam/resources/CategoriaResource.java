@@ -22,10 +22,6 @@ public class CategoriaResource {
 	@RequestMapping(value="/{id}", method=RequestMethod.GET)
 	public ResponseEntity<?> find(@PathVariable Integer id) {
 
-	    // para esse service.buscar funcionar tive que acrescentar código
-		// o código foi acrescentado em: CategoriaService.java
-		// O CÓDIGO CITADO ESTÁ NA ABA CITADA MARCADO COMO:
-		//DELETAR?? //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		Categoria obj = service.buscar(id);
 		
 		return ResponseEntity.ok().body(obj);
